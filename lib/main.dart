@@ -38,7 +38,7 @@ class _MyhomeState extends State<Myhome> {
             decoration: BoxDecoration(),
             child: Image.asset("assets/logo.jpg"),
           ),
-          SizedBox(height: 30,),
+          SizedBox(height: 30),
           SizedBox(
             height: 70,
             child: Padding(
@@ -58,7 +58,7 @@ class _MyhomeState extends State<Myhome> {
               ),
             ),
           ),
-          SizedBox(height: 30,),
+          SizedBox(height: 30),
           ElevatedButton(
             onPressed: () {
               if (_controller.text.isNotEmpty) {
