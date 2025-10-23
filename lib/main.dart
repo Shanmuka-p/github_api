@@ -1,5 +1,6 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
+import 'package:github_api/Chatbot.dart';
 import 'package:github_api/user_profiles.dart';
 
 void main() {
@@ -45,20 +46,27 @@ class _MyhomeState extends State<Myhome> {
               padding: const EdgeInsets.all(8.0),
               child: TextField(
                 controller: _controller,
-                style: TextStyle(color: Colors.white),
+
+                style: TextStyle(color: Colors.black,fontSize: 15),
                 decoration: InputDecoration(
-                  labelText: "Enter github username",
+                  
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black,width: 2.0),
+                    borderRadius: BorderRadius.circular(76),
+                  ),
+                  fillColor: Colors.white,
+                  filled: true,
+                  hintText: "Enter github username",
+                  //labelText: "Enter github username",
                   //hoverColor: Colors.white,
                   //enabledBorder: InputBorder.none,
-                  labelStyle: TextStyle(color: Colors.white),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(16),
-                  ),
+                  //labelStyle: TextStyle(color: Colors.black),
+                  
                 ),
               ),
             ),
           ),
-          SizedBox(height: 30),
+          SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
               if (_controller.text.isNotEmpty) {
@@ -71,9 +79,19 @@ class _MyhomeState extends State<Myhome> {
                 );
               }
             },
-            child: Text("Search"),
+            child: Text("Search", style: TextStyle(color: Colors.black)),
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.white,
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Chatbot()),
+          );
+        },
+        child: Icon(Icons.chat_bubble, color: Colors.black),
       ),
     );
   }
