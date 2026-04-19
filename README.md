@@ -1,6 +1,6 @@
 # github_api
 Using the github API 
-A new Flutter project.
+A new Flutter project which gives a basic idea about the API.
 
 ## Getting Started
 
